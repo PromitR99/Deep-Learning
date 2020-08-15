@@ -12,7 +12,7 @@ def L1(yhat, y):
     """
     
     loss = abs(y - yhat)
-    loss_squared = np.multiply(loss, loss)
+    loss_squared = loss**2
     loss_squared_sum = loss_squared.sum()
     print(loss_squared_sum)
 
