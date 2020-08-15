@@ -16,9 +16,8 @@ def sigmoid(x):
     ds = s*(1-s)
     ### END CODE HERE ###
     
-    return ds
+    print(ds)
 
 #try the following input
 x = np.array([1, 2, 3])
-r = sigmoid(x)
-print("sigmoid([1,2,3])",r)
+sigmoid(x)

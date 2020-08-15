@@ -15,7 +15,7 @@ def basic_sigmoid(x):
     s = 1/(1+math.exp(-x))
     ### END CODE HERE ###
     
-    return s
+    print(s)
 
 #try the following in cell
-#basic_sigmoid(3)
+basic_sigmoid(3)
