@@ -28,9 +28,9 @@ Exercise: Find the values for:
 Remember that train_set_x_orig is a numpy-array of shape (m_train, num_px, num_px, 3). For instance, you can access m_train by writing train_set_x_orig.shape[0].
 
 ### START CODE HERE ### (≈ 3 lines of code)
-m_train = None
-m_test = None
-num_px = None
+m_train = train_set_x_orig.shape[0]
+m_test = test_set_x_orig.shape[0]
+num_px = train_set_x_orig.shape[1]
 ### END CODE HERE ###
 
 print ("Number of training examples: m_train = " + str(m_train))
@@ -41,6 +41,18 @@ print ("train_set_x shape: " + str(train_set_x_orig.shape))
 print ("train_set_y shape: " + str(train_set_y.shape))
 print ("test_set_x shape: " + str(test_set_x_orig.shape))
 print ("test_set_y shape: " + str(test_set_y.shape))
+
+'''
+Output
+Number of training examples: m_train = 209
+Number of testing examples: m_test = 50
+Height/Width of each image: num_px = 64
+Each image is of size: (64, 64, 3)
+train_set_x shape: (209, 64, 64, 3)
+train_set_y shape: (1, 209)
+test_set_x shape: (50, 64, 64, 3)
+test_set_y shape: (1, 50)
+'''
 
 For convenience, you should now reshape images of shape (num_px, num_px, 3) in a numpy-array of shape (num_px ∗ num_px ∗ 3, 1). After this, our training (and test) dataset is a numpy-array where each column represents a flattened image. There should be m_train (respectively m_test) columns.
 
@@ -62,6 +74,15 @@ print ("train_set_y shape: " + str(train_set_y.shape))
 print ("test_set_x_flatten shape: " + str(test_set_x_flatten.shape))
 print ("test_set_y shape: " + str(test_set_y.shape))
 print ("sanity check after reshaping: " + str(train_set_x_flatten[0:5,0]))
+
+'''
+Output
+train_set_x_flatten shape: (12288, 209)
+train_set_y shape: (1, 209)
+test_set_x_flatten shape: (12288, 50)
+test_set_y shape: (1, 50)
+sanity check after reshaping: [17 31 56 22 33]
+'''
 
 To represent color images, the red, green and blue channels (RGB) must be specified for each pixel, and so the pixel value is actually a vector of three numbers ranging from 0 to 255.
 

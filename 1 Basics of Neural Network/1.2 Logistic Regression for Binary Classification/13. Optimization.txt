@@ -1,0 +1,5 @@
+Optimization :
+- You have initialized your parameters.
+- You are also able to compute a cost function and its gradient.
+- Now, you want to update the parameters using gradient descent.
+Exercise: Write down the optimization function. The goal is to learn w and b by minimizing the cost function J. For a parameter θ, the update rule is θ = θ − α*dθ, where α is the learning rate.
