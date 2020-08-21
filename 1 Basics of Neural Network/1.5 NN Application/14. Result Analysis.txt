@@ -1,0 +1,8 @@
+A few types of images the model tends to do poorly on include:
+
+1. Cat body in an unusual position
+2. Cat appears against a background of a similar color
+3. Unusual cat color and species
+4. Camera Angle
+5. Brightness of the picture
+6. Scale variation (cat is very large or small in image)
